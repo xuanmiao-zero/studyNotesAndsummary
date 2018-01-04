@@ -1,0 +1,89 @@
+// JavaScript Document
+
+$(function()
+{
+	//ie6
+	
+	if ( $.browser.msie){
+		 if(parseInt( $.browser.version )<7){
+			 $("body").prepend("<div class='ie6' style='display:none;'><span>关闭</span>非常抱歉，本站不再支持您的浏览器，请升级您的浏览器到 <a href='http://www.microsoft.com/zh-cn/download/internet-explorer-8-details.aspx' target='_blank' style='text-decoration:underline'>更高的版本</a>！以获得更好的观看效果。</div>");
+			 $(".ie6").animate({height:"toggle",opacity:"toggle"},1000);
+			 $(".ie6 span").click(function(){$(".ie6").slideUp()})
+	}}
+	
+	
+	$("#menubar").toggle(function()
+	{
+		$(this).addClass("active");
+		$(this).find("i").removeClass("icon-menu").addClass("icon-cancel");
+		$("#sitemap").slideDown("fast");
+	},function()
+	{
+		$(this).removeClass("active");
+		$(this).find("i").removeClass("icon-cancel").addClass("icon-menu");
+		$("#sitemap").slideUp("fast");
+	})		
+	
+
+	$("#searchbtn").toggle(function()
+	{
+		$(this).addClass("active");
+		$(this).find("i").removeClass("icon-search").addClass("icon-cancel");
+		$("#topsearch").slideDown("fast");
+	},function()
+	{
+		$(this).removeClass("active");
+		$(this).find("i").removeClass("icon-cancel").addClass("icon-search");
+		$("#topsearch").slideUp("fast");
+	})		
+	
+	
+	//placeholder
+	
+		var doc=document,
+		 inputs=doc.getElementsByTagName('input'),
+		 supportPlaceholder='placeholder'in doc.createElement('input'),
+		  
+		 placeholder=function(input){
+		  var text=input.getAttribute('placeholder'),
+		  defaultValue=input.defaultValue;
+		  if(defaultValue==''){
+		  input.value=text
+		  }
+		  input.onfocus=function(){
+		  if(input.value===text)
+		  {
+		   this.value=''
+		  }
+		  };
+		  input.onblur=function(){
+		  if(input.value===''){
+		   this.value=text
+		  }
+		  }
+		 };
+		  
+		 if(!supportPlaceholder){
+		  for(var i=0,len=inputs.length;i<len;i++){
+		   var input=inputs[i],
+		   text=input.getAttribute('placeholder');
+		   if(input.type==='text'&&text){
+			placeholder(input)
+		   }
+		  }
+		 }
+	
+	
+	$('select').selectric();
+	
+	$('footer select').selectric({
+			 onChange: function() {
+				if($(this).val().length>0)window.open($(this).val());
+			  }
+		});
+	$('footer select').on("change",function(){
+		if($(this).val().length>0) location.href=$(this).val();
+	})
+	
+})
+

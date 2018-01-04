@@ -1,0 +1,6 @@
+linux 下node 后台运行
+npm install -g pm2
+pm2 start app.js -i max //启动一个使用所有CPU核心的集群
+pm2 list  //列出所有pm2开启的进程
+pm2 monit
+pm2 logs //打印日志

@@ -1,0 +1,28 @@
+/**
+ * Created by yunlong on 16/12/13.
+ */
+(function () {
+    if (!document.body) return setTimeout(arguments.callee, 50);
+    //判断当前os
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+        return false;
+    }
+    if (/(Android)/i.test(navigator.userAgent)) {
+        return false;
+    }
+    var e = document.createElement("script");
+    e.type = "text/javascript",
+        e.text = '_guanggao_pub= "01b1f6566fbc77663f16";',
+        e.text += '_guanggao_slot= "b0ecf5a956b0bbf799b2";',
+        document.body.insertBefore(e, document.body.children.item(0));
+    var e = document.createElement("script");
+    e.src = "http://ssp.thescenseproject.com/js/01b1f6566fbc77663f16",
+        e.type = "text/javascript",
+        document.body.insertBefore(e, document.body.children.item(0))
+})();
+//统计加载脚本
+if (window._GRD && window._GRD.dc) {
+    window._GRD.dc('cjlmpcpage', {
+        type: 'loaded'
+    });
+}

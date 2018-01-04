@@ -1,0 +1,105 @@
+$(function(){
+	
+
+	////switch
+	$(".content .goverment .gv > li:gt(0)").hide();
+	$(".content .goverment ul.switch li.real").click(function(){
+						var _this=$(this);
+						$(".content .goverment ul.switch li.real").removeClass("current");
+						$(_this).addClass("current");
+						$(".content .goverment .gv > li").hide();
+						$(".content .goverment .gv > li").eq($(_this).index()).show();
+					}
+
+			);
+	
+	////switch
+	$(".content .conven .searchlist > li:gt(0)").hide();
+	var wt;
+	$(".content .conven ul.switch > li").hover(function(){
+				var _this=$(this);
+				wt=setTimeout(function(){
+						$(".content .conven ul.switch li").removeClass("current").removeClass("show");
+						$(_this).addClass("current");
+						$(".content .conven .searchlist > li").hide();
+						$(".content .conven .searchlist > li").eq($(_this).index()).show();
+						
+					},200)
+			},
+			function(){
+				clearTimeout(wt);
+				}
+			);
+	
+	
+	///
+	
+	////switch
+	$(".ylnews .newswraper:gt(0)").hide();
+	$(".ylnews ul.switch > li").hover(function(){
+				var _this=$(this);
+				wt=setTimeout(function(){
+						$(".ylnews ul.switch li").removeClass("current").removeClass("show");
+						$(_this).addClass("current");
+						$(".ylnews .newswraper").hide();
+						$(".ylnews .newswraper").eq($(_this).index()).show();
+						
+					},200);
+			},
+			function(){
+				clearTimeout(wt);
+				}
+			);
+	
+	
+	///
+
+
+	  $('.content .adv ul').owlCarousel(
+						  {
+								singleItem:true,
+								autoPlay:true,
+								responsive:true,
+								itemsDesktop:false,
+								stopOnHover:true,
+								addClassActive:true
+							 }
+						  );
+	 $('.mod .sgallery ul').owlCarousel(
+	  {
+	  		items : 1,
+		    itemsDesktop : [1199,1],
+		    itemsDesktopSmall : [799,2],
+			autoPlay:true,
+			responsive:true,
+			stopOnHover:true,
+			itemsScaleUp:true,
+			addClassActive:true
+		 }
+	  );	
+
+	 $("#subsmenu").click(function()
+	{
+		
+		if($(".content .conven ul.switch li").hasClass("show")){
+
+			$(".content .conven ul.switch li").removeClass("show");
+		}else
+		{	$(".content .conven ul.switch li").addClass("show");
+		}
+
+		
+		
+		
+	});
+	
+	$('#startdate,#enddate').pikaday({ format: 'YYYY-MM-DD',yearRange:50,i18n: {
+							previousMonth : '前一月',
+							nextMonth     : '下一月',
+							months        : ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+							weekdays      : ['周日','周一','周二','周三','周四','周五','周六'],
+							weekdaysShort : ['日','一','二','三','四','五','六']
+						}});
+	
+});
+

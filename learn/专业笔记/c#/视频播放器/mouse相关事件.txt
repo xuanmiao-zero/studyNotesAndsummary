@@ -1,0 +1,15 @@
+onmousedown 当用户用任何鼠标按钮单击对象时触发。 
+
+onmouseenter 当用户将鼠标指针移动到对象内时触发。 
+onmouseleave 当用户将鼠标指针移出对象边界时触发。 
+
+onmousemove 当用户将鼠标划过对象时触发。 
+
+onmouseover 当用户将鼠标指针移动到对象内时触发。 
+onmouseout 当用户将鼠标指针移出对象边界时触发。 
+
+onmouseup 当用户在鼠标位于对象之上时释放鼠标按钮时触发。 
+onmousewheel 当鼠标滚轮按钮旋转时触发。 
+onmove 当对象移动时触发。 
+onmoveend 当对象停止移动时触发。 
+onmovestart 当对象开始移动时触发。

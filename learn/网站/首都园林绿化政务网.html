@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://www.bjyl.gov.cn/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>首都园林绿化政务网</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link href="./首都园林绿化政务网_files/base.css" rel="stylesheet" type="text/css">
+<link href="./首都园林绿化政务网_files/index.css" rel="stylesheet" type="text/css">
+<link href="./首都园林绿化政务网_files/bjyl.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./首都园林绿化政务网_files/pikaday.css" type="text/css">
+<script src="./首都园林绿化政务网_files/jquery-1.8.3.min.js.下载" type="text/javascript"></script>
+<link rel="stylesheet" href="./首都园林绿化政务网_files/owl.carousel.css">
+<script src="./首都园林绿化政务网_files/owl.carousel.min.js.下载" type="text/javascript"></script>
+<script src="./首都园林绿化政务网_files/comm.js.下载" type="text/javascript"></script>
+<script src="./首都园林绿化政务网_files/index.js.下载" type="text/javascript"></script>
+<script src="./首都园林绿化政务网_files/moment.js.下载" type="text/javascript"></script>
+<script src="./首都园林绿化政务网_files/pikaday.js.下载" type="text/javascript"></script>
+<script src="./首都园林绿化政务网_files/pikaday.jquery.js.下载"></script>
+<script src="./首都园林绿化政务网_files/jquery.selectric.min.js.下载"></script>
+<link rel="stylesheet" href="./首都园林绿化政务网_files/selectric.css">
+<!--[if lt IE 9]>
+<script src="/js/html5.js" type="text/javascript"></script>
+<script src="/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<!--[if lt IE 8]>
+	<link rel="stylesheet" href="/font/css/bjyl-ie7.css">
+<![endif]-->
+
+<script type="text/javascript">
+function send1(){
+var keyword = document.getElementById("textfield5").value;
+if(keyword == "关键词"){
+keyword = "";
+}
+var leixing = document.getElementById("select5").value;
+var quxian = document.getElementById("select4").value;
+var url = "/ggfw/gyfjqyl/gyxx/?key="+keyword+"&leixing="+leixing+"&quxian="+quxian+"&name=&add=&fee=&sheshi=&hua=";
+window.location.href=url;
+}
+</script>
+
+<script type="text/javascript">
+function sendzjk(){
+ var zjname = document.getElementById("zjname").value;
+ var zhuany = document.getElementById("zhuany").value;
+ var zhic = document.getElementById("zhic").value;
+ var guanjianzi = document.getElementById("guanjianzi").value;
+ var url = "/sdlh/ylkj/yllhhyzjcx/?zjname="+zjname+"&zhuany="+zhuany+"&zhic="+zhic+"&guanjianzi="+guanjianzi;
+ window.location.href = url;
+ 
+}
+</script>
+<script type="text/javascript">
+
+function send(){
+var  name = document.getElementById("gardenName").value;
+var  quxian1 = document.getElementById("quxian1").value;
+var  guopin = document.getElementById("fruitType").value;
+var  address = document.getElementById("gardenAddress").value;
+var  key = document.getElementById("keyword").value;
+var url = "/ggfw/gyfjqyl/gggy/gyjd/?name="+escape(name)+"&quxian1="+escape(quxian1)+"&guopin="+escape(guopin)+"&address="+escape(address)+"&key="+escape(key);
+
+window.location.href = url;
+}
+
+</script>
+
+<script type="text/javascript">
+
+function sendflfg(){
+	    var LawName = document.getElementById('LawName').value;
+		var LawType = document.getElementById('LawType').value;
+		var LawNo = document.getElementById('LawNo').value;
+		var LawSource = document.getElementById('LawSource').value;
+		var LawKeyword = document.getElementById('LawKeyword').value;
+var url = "/ggfw/lmglfg/?name="+escape(LawName)+"&lx="+escape(LawType)+"&lawno="+escape(LawNo)+"&lawsource="+escape(LawSource)+"&lawkeyword="+escape(LawKeyword);
+
+window.location.href = url;
+}
+
+</script>
+
+<script type="text/javascript">
+function clear1(){
+ document.getElementById("textfield5").value = "";
+}
+</script>
+<script>
+function goPage()
+{
+	var coll=document.getElementsByName("radiobutton"); 
+	var j=0;  
+	for(var i=0; i<coll.length;i++)   
+	{
+		if(coll[i].checked)
+		{
+			var url=coll[i].value;
+			window.open(url,"_blank");
+		}
+	}
+}
+</script><script type="text/javascript">
+$(function(){
+	$.ajax({
+			url : 'http://www.beijing.gov.cn/sy/hsyj/pushAlarm_5926.jsonp',
+			dataType : "jsonp",
+			scriptCharset:'gb2312',
+			jsonp : "pushInfoJsonpCallBack",
+			jsonpCallback:"pushInfoJsonpCallBack",
+			success : function(data) {
+				if(data.length<1){
+					$("#hsyjxx").css('display','none'); 
+				}else{
+				$.each(data,function(i,json){
+				$("#hsyjxx").append('<ul class="left">'+json.title+'</ul>');
+				$("#hsyjxx").append('<ul class="content"><a href="'+json.link+'" target="_blank">'+json.content+'</a></ul>');
+				$("#hsyjxx").append('<ul class="gb"><img src="http://www.beijing.gov.cn/images/wza2010/index/hsyjxx_gb_20150415.jpg" width="18" height="55" title="关闭红色预警信息" alt="关闭红色预警信息" class="close" /></ul><div class="clear"></div>');
+				$("#hsyjxx").find(".close").bind("click", function (){
+					$("#hsyjxx").css('display','none'); 
+				});
+					
+				})
+				}
+			},
+			 error:function(){
+		           alert('fail');
+		    }
+		});
+	//红色预警信息关闭
+	})
+</script>
+<style>
+.syyjxx div,.syyjxx ul,.syyjxx li,.syyjxx img {	margin:0; padding:0px; border:0px; }
+.syyjxx { width: 100%;  position: relative; border: solid 1px #FF0000;overflow：hidden; }
+.syyjxx ul.left { width: 15%;background: url(http://www.beijing.gov.cn/images/wza2010/index/syyjxx_bg20150330.png) no-repeat; float: left; color: #d61800; font-family: "微软雅黑", "Microsoft YaHei"; font-size:18px; font-weight: bold; text-align: center;padding-left: 80px; padding-top:10px; line-height: 24px; }
+.syyjxx ul.content { width:73%; float: left; color: #666; font-family: "宋体", "SimSun"; font-size: 13px; }
+.syyjxx ul.gb { width: 5%;  }
+.syyjxx .close { position: absolute; right: 7px; top: 9px; cursor: pointer; }
+.clear{clear:both;}
+</style>
+</head>
+
+<body class="yahei">
+   <script>
+function checkSearchForm(){
+	var theform = document.getElementById("searchEngForm");
+	var temp = theform.qt.value;
+	if(temp==null || temp==""){
+		alert("请输入搜索条件");
+        return false;
+	}
+	else{
+        theform.submit();
+		return true;
+	}
+}
+</script>
+
+
+<header>
+   <aside>
+<div class="mainWrap">
+   		<b></b>
+        <div class="search-social">
+       		<ul><li><a class="icon" href="javascript:;" title="分享到新浪微博" onclick="window.open(&#39;http://service.weibo.com/share/share.php?appkey=&amp;title=&#39;+document.title+&#39;&amp;url=&#39;+location.href)"><i class="icon-weibo"></i></a></li><li><a class="icon" href="http://www.bjyl.gov.cn/#"><i class="icon-wechat"></i></a><div class="socialwraper"><i><em></em></i><img src="./首都园林绿化政务网_files/w_wx.jpg"></div></li><li><a href="http://www.bjyl.gov.cn/English/" target="_blank" class="en">ENGLISH</a></li><li>
+            <form id="searchEngForm" name="searchForm" action="http://so.beijing.gov.cn/DomainQuery" method="get" target="_blank"><div class="searchbox clearfix">
+ <input type="text" onfocus="this.select()" placeholder="站内搜索" name="qt"><input name="domainSite" type="hidden" value="bjyl.gov.cn"><input name="database" type="hidden" value=""><input name="ku" type="hidden" value="0">
+<a href="javascript:;">
+<i class="icon-search" onclick="checkSearchForm()"></i></a></div></form>
+            </li></ul>
+        </div>
+        <div class="login">
+          <a href="http://fw.bjyl.gov.cn/user/uaslogin.aspx">网上办事登录</a> <a href="http://fw.bjyl.gov.cn/webuser/register/" class="reg">注册</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+   </aside>
+
+  <div class="mainWrap">
+   	<div class="navwrap clearfix">
+   		<a href="http://www.bjyl.gov.cn/" class="logo"></a><a href="http://www.beijing.gov.cn/" target="_blank" class="logo_1"></a><a href="http://www.forestry.gov.cn/" target="_blank" class="logo_2"></a>
+        <div class="menubar motion" id="menubar"><i class="icon-menu"></i></div>
+        <nav class="yahei">
+        	<ul id="nav">
+            	<li><a href="http://www.bjyl.gov.cn/">首页</a></li>
+                <li><a href="http://www.bjyl.gov.cn/zwgk/" target="_blank">政务公开</a>
+                		<ul><i><em></em></i>
+
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/jgzn/ldbz/" target="_blank">领导介绍</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/gsgg/" target="_blank">公示公告</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/jgzn/" target="_blank">机构职能</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/" target="_blank">权力清单</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/zrqd/" target="_blank">责任清单</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/ghxx/" target="_blank">规划计划</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/rsdt/" target="_blank">人事动态</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/cwgk/" target="_blank">财务公开</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/tjxx/" target="_blank">统计信息</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/sx/" target="_blank">督查事项</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/ztxx/zqxx/" target="_blank">职权信息</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/lxwm/" target="_blank">联系我们</a></li> 
+                        </ul>
+                </li>
+             <li><a href="http://www.bjyl.gov.cn/sdlh/" target="_blank">首都绿化 </a>
+                	<ul><i><em></em></i>
+
+                            <li><a href="http://www.bjyl.gov.cn/sdlh/2011zszt/" target="_blank">义务植树</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/sdlh/bjslfh/" target="_blank">森林防火</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/sdlh/jkld/" target="_blank">健康绿道</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/sdlh/bhsdbhdqzs/" target="_blank">湿地保护</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/sdlh/ldgs/" target="_blank">绿线公示</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/sdlh/ylkj/" target="_blank">园林科技</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/fgwj/dfbz/" target="_blank">地方标准</a></li> 
+                </ul>
+                </li>
+               <li><a href="http://www.bjyl.gov.cn/ggfw/" target="_blank">为民服务</a> 
+
+                	<ul><i><em></em></i>
+
+                            <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzxk2011/" target="_blank">办事大厅</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/ggfw/slhxdjyb/" target="_blank">森林火险等级预报</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/cs/" target="_blank">城市公园</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/fj/" target="_blank">风景名胜</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/sl/" target="_blank">森林公园</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/jy/" target="_blank">郊野公园</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/gggy/" target="_blank">观光果园</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/ggfw/ysdwjh/" target="_blank">野生动物救护机构</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/ggfw/aqyjzs/" target="_blank">安全应急知识</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/ggfw/zwyy/" target="_blank">植物园艺</a></li>
+                            <li><a href="http://www.bjyl.gov.cn/ggfw/jtyhzs/" target="_blank">家庭养花知识</a></li> 
+                        </ul>
+                </li>
+                <li><a href="http://www.bjyl.gov.cn/hdjl/" target="_blank">互动交流</a>                	<ul><i><em></em></i>
+
+                            <li><a href="http://www.bjyl.gov.cn/hdjl/zxft/" target="_blank">在线访谈</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/hdjl/zxts/" target="_blank">网上信箱</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/hdjl/ysqgk/" target="_blank">依申请公开</a></li>
+
+                            <li><a href="http://weibo.com/u/2611712083" target="_blank">政务微博</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/hdjl/zwwx/" target="_blank">政务微信</a></li>
+ 
+
+                           
+                        </ul>
+                </li>
+                <li><a href="http://www.bjyl.gov.cn/ztxx/" target="_blank">专题专栏 </a>
+
+                	<ul><i><em></em></i>
+
+                            <li><a href="http://www.bjyl.gov.cn/ztxx/mtjj/" target="_blank">媒体聚焦</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/ztxx/sgsxx/" target="_blank">双公示信息</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/ztxx/aqscbzhgl/" target="_blank">安全生产标准化</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/ztxx/zqxx/" target="_blank">职权信息</a></li>
+
+                            <li><a href="http://zhengwu.beijing.gov.cn/zwzt/jtlq/default.htm" target="_blank">集体林权制度改革</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/ztxx/zcyl/" target="_blank">增彩延绿科技创新</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/ztxx/jzgd/" target="_blank">见证古都</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/ztxx/bjssylcpzlaqjdgl/" target="_blank">食用林产品安全</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/ztxx/lhzgsfzpz/" target="_blank">书法作品展</a></li>
+
+                            <li><a href="http://smartforest.forestry.gov.cn/cn/" target="_blank">中国信息林</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/ztxx/bjsthblxhslwhxlhd/" target="_blank">森林体验活动</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/sdlh/cyldg/" target="_blank">彩画森林 魅力京郊</a></li>
+
+                            <li><a href="http://www.bjyl.gov.cn/ztxx/wspystlzczt/" target="_blank">完善平原生态林政策</a></li>
+ 
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+     </div>
+   </div>
+   <section class="sitemap clearfix" id="sitemap">
+   	<div class="mainWrap">
+   		<ul class="clearfix">
+        <li><h3><a href="http://www.bjyl.gov.cn/zwgk/">政务公开</a></h3>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/jgzn/ldbz/" target="_blank">领导介绍</a>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/gsgg/" target="_blank">公示公告</a>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/jgzn/" target="_blank">机构职能</a>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/" target="_blank">权力清单</a>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/zrqd/" target="_blank">责任清单</a>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/ghxx/" target="_blank">规划计划</a>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/rsdt/" target="_blank">人事动态</a>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/cwgk/" target="_blank">财务公开</a>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/tjxx/" target="_blank">统计信息</a>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/sx/" target="_blank">督查事项</a>
+
+                           <a href="http://www.bjyl.gov.cn/ztxx/zqxx/" target="_blank">职权信息</a>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/lxwm/" target="_blank">联系我们</a>
+ 
+                        
+
+        </li>
+         <li>
+        <h3><a href="http://www.bjyl.gov.cn/sdlh/">首都绿化</a></h3>
+
+                           <a href="http://www.bjyl.gov.cn/sdlh/2011zszt/" target="_blank">义务植树</a>
+
+                           <a href="http://www.bjyl.gov.cn/sdlh/bjslfh/" target="_blank">森林防火</a>
+
+                           <a href="http://www.bjyl.gov.cn/sdlh/jkld/" target="_blank">健康绿道</a>
+
+                           <a href="http://www.bjyl.gov.cn/sdlh/bhsdbhdqzs/" target="_blank">湿地保护</a>
+
+                           <a href="http://www.bjyl.gov.cn/sdlh/ldgs/" target="_blank">绿线公示</a>
+
+                           <a href="http://www.bjyl.gov.cn/sdlh/ylkj/" target="_blank">园林科技</a>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/fgwj/dfbz/" target="_blank">地方标准</a>
+ 
+                
+        </li>
+        <li>
+        <h3><a href="http://www.bjyl.gov.cn/pddh/wmfw/">为民服务</a></h3>
+
+                           <a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzxk2011/" target="_blank">办事大厅</a>
+
+                           <a href="http://www.bjyl.gov.cn/ggfw/slhxdjyb/" target="_blank">森林火险等级预报</a>
+
+                           <a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/cs/" target="_blank">城市公园</a>
+
+                           <a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/fj/" target="_blank">风景名胜</a>
+
+                           <a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/sl/" target="_blank">森林公园</a>
+
+                           <a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/jy/" target="_blank">郊野公园</a>
+
+                           <a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/gggy/" target="_blank">观光果园</a>
+
+                           <a href="http://www.bjyl.gov.cn/ggfw/ysdwjh/" target="_blank">野生动物救护机构</a>
+
+                           <a href="http://www.bjyl.gov.cn/ggfw/aqyjzs/" target="_blank">安全应急知识</a>
+
+                           <a href="http://www.bjyl.gov.cn/ggfw/zwyy/" target="_blank">植物园艺</a>
+
+                           <a href="http://www.bjyl.gov.cn/ggfw/jtyhzs/" target="_blank">家庭养花知识</a>
+ 
+        </li>
+        <li>
+        <h3><a href="http://www.bjyl.gov.cn/hdjl/">互动交流</a></h3>
+
+                           <a href="http://www.bjyl.gov.cn/hdjl/zxft/" target="_blank">在线访谈</a>
+
+                           <a href="http://www.bjyl.gov.cn/hdjl/zxts/" target="_blank">网上信箱</a>
+
+                           <a href="http://www.bjyl.gov.cn/hdjl/ysqgk/" target="_blank">依申请公开</a>
+
+                           <a href="http://weibo.com/u/2611712083" target="_blank">政务微博</a>
+
+                           <a href="http://www.bjyl.gov.cn/hdjl/zwwx/" target="_blank">政务微信</a>
+ 
+        </li>
+        <li>
+        <h3><a href="http://www.bjyl.gov.cn/ztxx/">专题信息</a></h3>
+
+                           <a href="http://www.bjyl.gov.cn/ztxx/mtjj/" target="_blank">媒体聚焦</a>
+
+                           <a href="http://www.bjyl.gov.cn/ztxx/sgsxx/" target="_blank">双公示信息</a>
+
+                           <a href="http://www.bjyl.gov.cn/ztxx/aqscbzhgl/" target="_blank">安全生产标准化</a>
+
+                           <a href="http://www.bjyl.gov.cn/ztxx/zqxx/" target="_blank">职权信息</a>
+
+                           <a href="http://zhengwu.beijing.gov.cn/zwzt/jtlq/default.htm" target="_blank">集体林权制度改革</a>
+
+                           <a href="http://www.bjyl.gov.cn/ztxx/zcyl/" target="_blank">增彩延绿科技创新</a>
+
+                           <a href="http://www.bjyl.gov.cn/ztxx/jzgd/" target="_blank">见证古都</a>
+
+                           <a href="http://www.bjyl.gov.cn/ztxx/bjssylcpzlaqjdgl/" target="_blank">食用林产品安全</a>
+
+                           <a href="http://www.bjyl.gov.cn/ztxx/lhzgsfzpz/" target="_blank">书法作品展</a>
+
+                           <a href="http://smartforest.forestry.gov.cn/cn/" target="_blank">中国信息林</a>
+
+                           <a href="http://www.bjyl.gov.cn/ztxx/bjsthblxhslwhxlhd/" target="_blank">森林体验活动</a>
+
+                           <a href="http://www.bjyl.gov.cn/sdlh/cyldg/" target="_blank">彩画森林 魅力京郊</a>
+
+                           <a href="http://www.bjyl.gov.cn/ztxx/wspystlzczt/" target="_blank">完善平原生态林政策</a>
+ 
+        </li>
+        </ul>
+       </div>
+     </section>
+</header>
+<div class="content">
+    <div class="mainWrap relative clearfix">
+        <section class="adv">
+            <ul class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+
+<div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 7930px; left: 0px; display: block; transform: translate3d(-793px, 0px, 0px); transition: all 800ms ease;"><div class="owl-item" style="width: 793px;"><li><a href="http://www.bjyl.gov.cn/sdlh/cyldg/" target="_blank"><img src="./首都园林绿化政务网_files/W020151126624159846309.jpg" alt="1200X400首页banner魅力京郊.jpg" border="0/"></a></li></div><div class="owl-item active" style="width: 793px;"><li><a href="http://www.bjyl.gov.cn/ztxx/aqscbzhgl/" target="_blank"><img src="./首都园林绿化政务网_files/W020161109375059607067.jpg" alt="园林首页推荐大图2.jpg" border="0/"></a></li></div><div class="owl-item" style="width: 793px;"><li><a href="http://www.bjyl.gov.cn/sdlh/jjjlylhxtfz/" target="_blank"><img src="./首都园林绿化政务网_files/W020151126624857320209.jpg" alt="1200X400首页banner京津冀.jpg" border="0/"></a></li></div><div class="owl-item" style="width: 793px;"><li><a href="http://www.bjyl.gov.cn/ztxx/bjsdsjzyjnds/" target="_blank"><img src="./首都园林绿化政务网_files/W020160329623212097319.jpg" alt="北京市第四届职业技能大赛首页通栏-定稿-20160328.jpg" border="0/"></a></li></div><div class="owl-item" style="width: 793px;"><li><a href="http://www.bjyl.gov.cn/ztxx/lhzgsfzpz/" target="_blank"><img src="./首都园林绿化政务网_files/W020160704523017123593.jpg" alt="1200-400.jpg" border="0/"></a></li></div></div></div> 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+ 
+            <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page"><span class=""></span></div><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div></ul>
+        </section>
+        <section class="goverment">
+        	<div class="govermentwraper">
+        	<ul class="switch clearfix"><li class="real current">办事大厅</li><li class="real">结果查询</li><li></li></ul>
+            <ul class="gv">
+            	<li style="display: list-item;">
+            <ul class="govlist clearfix" id="bsdt">
+                	
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/yllh2011/" target="_blank">绿地管理</a></li>
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/gsmm2011/" target="_blank">古树名木</a></li>
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/slfh2011/" target="_blank">森林防火</a></li>
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/zwjy2011/" target="_blank">植物检疫</a></li>
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/ldgl2011/" target="_blank">林地管理</a></li>
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/smkfyz2011/" target="_blank">树木移伐</a></li>
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/smfy2011/" target="_blank">林木移伐</a></li>
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/slly2011/" target="_blank">森林旅游</a></li>
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/mcys2011/" target="_blank">木材运输</a></li>
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/zrbhgl2011/" target="_blank">自然保护区</a></li>
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/lmzzmm2011/" target="_blank">种子苗木</a></li>
+                      <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/xzzzfl/ysdzwbh/" target="_blank">野生动植物</a></li></ul>
+              </li>
+              <li style="display: none;">
+              	<div class="resultsearch clearfix">
+                	 <form name="frmSearch" method="get" accept-charset="ISO-8859-1" action="http://fw.bjyl.gov.cn/webuser/normaluser/spec/permissionresults/showtype.aspx" target="_blank">
+<input type="hidden" name="nav" value="0">
+                	<input type="text" placeholder="起始日期" id="startdate" name="KeyStartDate"> - <input type="text" id="enddate" placeholder="结束日期" name="KeyEndDate">
+                    <div><input type="text" class="kyw" placeholder="关键词" id="KeyWord" name="KeyWord"> <button> <i class="icon-search"></i></button></div></form>
+                  
+                </div>
+              </li>
+              </ul>
+             <h2><span>政府信息公开</span></h2>
+             <ul class="govitemlist-1 clearfix"> 	
+
+                <li><a href="http://zfxxgk.beijing.gov.cn/columns/97/guideMenu.html" target="_blank">政府信息公开指南</a></li>
+
+                <li><a href="http://zfxxgk.beijing.gov.cn/columns/97/orgCatalogMenu.html" target="_blank">政府信息公开目录</a></li>
+
+                <li><a href="http://zfxxgk.beijing.gov.cn/columns/97/yearMenu.html" target="_blank">政府信息公开年报</a></li>
+
+                <li><a href="http://zfxxgk.beijing.gov.cn/columns/97/flowMenu.html" target="_blank">依申请公开申请流程</a></li>
+
+                <li><a href="http://zfxxgk.beijing.gov.cn/columns/97/superviseMenu.html" target="_blank">监督投诉</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/hdjl/ysqgk/" target="_blank">网上申请依申请公开</a></li>
+
+             </ul>
+            <div class="line"></div>
+              <ul class="govitemlist-2 clearfix">             	
+ 
+                <li><a href="http://www.bjyl.gov.cn/zwgk/zwxx/" target="_blank">政务信息</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/jgzn/" target="_blank">机构职能</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/fgwj/" target="_blank">法规文件</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/ghxx/" target="_blank">规划计划</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/xzzz2011/" target="_blank">权力清单</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/zrqd/" target="_blank">责任清单</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/sx/" target="_blank">督查事项</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/ztxx/sgsxx/" target="_blank">双公示信息</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/yjya/" target="_blank">应急预案</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/gsgg/" target="_blank">公示公告</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/rsdt/" target="_blank">人事动态</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/cwgk/" target="_blank">财务公开</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/tjxx/" target="_blank">统计信息</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/ztxx/zqxx/" target="_blank">职权信息</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/gczb/" target="_blank">工程招标</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/gwyly/" target="_blank">公务员录用</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/qxyl/" target="_blank">区县园林</a></li>
+
+                <li><a href="http://www.bjyl.gov.cn/zwgk/lxwm/" target="_blank">联系我们</a></li>
+
+ 
+<li class="wide">  <a href="http://banshi.beijing.gov.cn/pubservice/query/queryPage2" target="_blank">行政审批事项办理查询</a></li>
+                
+
+             </ul>
+             </div>
+        </section>
+        <section class="column-1">
+        	<div class="clearfix">
+           <div class="syyjxx" id="hsyjxx" style="display: none;"></div>
+             <div class="clear"></div>
+        	<div class="newsmod ylnews">
+              <div class="newsmodwraper">
+            	<h2 class="clearfix"><a class="more" href="http://www.bjyl.gov.cn/zwgk/zwxx/" target="_blank">+ 更多</a>
+                 <nav><ul class="switch clearfix"><li class="current"><a href="http://www.bjyl.gov.cn/zwgk/zwxx/" target="_blank">政务信息</a></li><li><a href="http://www.bjyl.gov.cn/zwgk/gsgg/" target="_blank">公示公告</a></li></ul></nav>
+                </h2>
+                <div class="newswraper">
+                    <div class="special">
+                       
+                	<a href="http://www.bjyl.gov.cn/zwgk/zwxx/201611/t20161128_186174.shtml" target="_blank">
+<div><h3 style="margin:0" class="yahei"><b>本市全面开展森林防火督导检查工作 </b></h3></div>
+                    <p>　　11月中旬，市园林绿化局分7个检查组由局领导带队，深入14个区，检查督导贯彻落实全市森林防火电视电话会议情况。重...</p> 
+                    </a>
+                    </div>
+                    <ul class="enlist">
+                       
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/zwxx/201611/t20161128_186173.shtml" target="_blank"><i class="icon-angle-right"></i>北京市荣获第十二届中国（荆门）菊花展览会室外展大奖</a></li>
+
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/zwxx/201611/t20161125_186143.shtml" target="_blank"><i class="icon-angle-right"></i>市园林绿化局检查石景山区森林防火工作</a></li>
+
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/zwxx/201611/t20161128_186172.shtml" target="_blank"><i class="icon-angle-right"></i>东城区提前完成2016年屋顶绿化1.2万平方米工作任务</a></li>
+
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/zwxx/201611/t20161122_186107.shtml" target="_blank"><i class="icon-angle-right"></i>北京市园林绿化局30个审批事项实现互联网申报</a></li>
+
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/zwxx/201611/t20161122_186105.shtml" target="_blank"><i class="icon-angle-right"></i>市园林绿化局检查东城区园林绿化系统极端天气应对...</a></li>
+
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/zwxx/201611/t20161122_186106.shtml" target="_blank"><i class="icon-angle-right"></i>“青春杯”阳台绿化设计大赛在北京林业大学举行</a></li>
+
+                    </ul>
+                </div>
+                 <div class="newswraper" style="display: none;">
+                    <div class="special">
+                       
+                	<a href="http://www.bjyl.gov.cn/zwgk/gsgg/201611/t20161116_185888.shtml"><h3 class="yahei"><b>北京市园林绿化局关于公布北京市各区野生动物违法线索举报电话的公告 </b></h3>
+                    <p>   为充分发动群众、广泛征集线索，共同打击乱捕滥猎和非法经营候鸟等野生动物违法犯罪行为，按照国家林业局保护司印发...</p> 
+                    </a>
+                    </div>
+                    <ul class="enlist">
+                          
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/gsgg/201611/t20161107_185551.shtml" target="_blank"><i class="icon-angle-right"></i>北京市园林绿化局关于开展“北京市森林资源损失鉴...</a></li>
+
+ 
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/gsgg/201609/t20160926_184464.shtml" target="_blank"><i class="icon-angle-right"></i>北京市平原地区造林工程建设优秀集体、优秀个人以...</a></li>
+
+ 
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/gsgg/201610/t20161014_184889.shtml" target="_blank"><i class="icon-angle-right"></i>林木种子质量抽查结果公告（2016年9月）</a></li>
+
+ 
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/gsgg/201609/t20160926_184482.shtml" target="_blank"><i class="icon-angle-right"></i>林木种子质量抽查结果公告（2016年8月）</a></li>
+
+ 
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/gsgg/201609/t20160926_184480.shtml" target="_blank"><i class="icon-angle-right"></i>林木种子质量抽查结果公告（2016年7月）</a></li>
+
+ 
+                	<li><a href="http://www.bjyl.gov.cn/zwgk/gsgg/201609/t20160926_184477.shtml" target="_blank"><i class="icon-angle-right"></i>林木种子质量抽查结果公告（2016年6月）</a></li>
+
+ 
+                    </ul>
+                </div>
+               </div>
+            </div>
+            <div class="newsmod">
+            	<div class="newsmodwraper">
+                    <h2 class="clearfix"><a class="more" href="http://www.bjyl.gov.cn/ztxx/mtjj/" target="_blank">+ 更多</a><span class="yahei"><a href="http://www.bjyl.gov.cn/ztxx/mtjj/" target="_blank">媒体聚焦</a></span></h2>
+                    <ul class="tmlist">
+
+                    	<li class="special clearfix"><span><b>28</b><em>2016.11</em></span><strong><i>北京青年报</i><a href="http://www.bjyl.gov.cn/ztxx/mtjj/mtbd/201611/t20161128_186151.shtml" target="_blank">本市新增45处公园绿地</a> </strong></li>
+ 
+
+                        <li class="clearfix"><span><b>28</b><em>2016.11</em></span><strong><i>北京日报</i><a href="http://www.bjyl.gov.cn/ztxx/mtjj/mtbd/201611/t20161128_186150.shtml" target="_blank">全市健康绿道再增160公里</a> </strong></li>
+ 
+                        <li class="clearfix"><span><b>24</b><em>2016.11</em></span><strong><i>经济日报</i><a href="http://www.bjyl.gov.cn/ztxx/mtjj/mtbd/201611/t20161124_186131.shtml" target="_blank">北京开展打击非法捕售鸟类行动</a> </strong></li>
+ 
+                        <li class="clearfix"><span><b>22</b><em>2016.11</em></span><strong><i>北京日报</i><a href="http://www.bjyl.gov.cn/ztxx/mtjj/mtbd/201611/t20161122_186045.shtml" target="_blank">京郊362处边角地变公园</a> </strong></li>
+ 
+                        <li class="clearfix"><span><b>22</b><em>2016.11</em></span><strong><i>中国绿色时报</i><a href="http://www.bjyl.gov.cn/ztxx/mtjj/mtbd/201611/t20161122_186044.shtml" target="_blank">北京林业部门启动雪天应急保障预案</a> </strong></li>
+ 
+                    </ul>
+                </div>
+			</div>
+            </div>
+            <aside class="commpop clearfix">
+            	<ul><li><div class="popwraper" style="padding:10px 0"><span style="margin-right:0" class="item-1"></span>
+<samp class="poptxtwraper"> <a href="http://www.gov.cn/pushinfo/v150203/index.htm" target="_blank">国务院信息</a><a href="http://www.bjyl.gov.cn/sdlh/bjslfh/" target="_blank">森林防火</a><a href="http://zhengwu.beijing.gov.cn/jiedu/" target="_blank">2016年市政府年度重点工作解读</a></samp> </div> </li><li>
+<div class="popwraper" style="padding:10px 0"><span style="margin-right:0" class="item-2"></span><samp class="poptxtwraper"><a href="http://www.bjyl.gov.cn/ztxx/ysdwjhw/" target="_blank">野生动物救护</a><a href="http://www.bjyl.gov.cn/sdlh/yhsw/yhswfz/201608/t20160825_183526.shtml" target="_blank">病虫害主管部门</a><a href="http://shipin.beijing.gov.cn/html/ItemId27/2016-09-27/8382.html" target="_blank">走进森林感受绿和美</a><a href="http://www.bjyl.gov.cn/ztxx/2016hywhhd/" target="_blank">赏叶攻略</a></samp></div></li><li><div class="popwraper" style="padding:10px 0"><span style="margin-right:0" class="item-3"></span><samp class="poptxtwraper"><a href="http://www.bjyl.gov.cn/ztxx/bjhx/" target="_blank">北京花讯</a><a href="http://bjby.bjwmb.gov.cn/mdgs/2016/" target="_blank">为北京榜样点赞</a><a href="http://photo.bjyl.gov.cn/yl/1578/1606/3158/463134/index.html" target="_blank">"美丽北京 魅力园林"摄影大赛</a></samp></div></li>
+                </ul>
+            </aside>
+            <div class="conven">
+            	<h2>便民服务指南</h2>
+                <nav><div class="subsmenu" id="subsmenu"><i class="icon-menu"></i></div><ul class="switch clearfix" style="padding-left:3px"><li class="current">公园搜索</li><li>观光果园查询</li><li>法规查询</li><li>园林绿化行业专家查询</li></ul></nav>
+                <ul class="searchlist">
+                	<li>
+                    	 <!--form name="form3" method="post"-->
+                        <div class="search clearfix">
+                            <div class="item sele-1">
+                            <div class="selectric-wrapper"><div class="selectric-hide-select"><select name="select4" id="select4" tabindex="0">
+                            	<option value="">所在区县</option>
+                              	<option value="市属">市属</option>
+                                <option value="东城区">东城区</option>
+                                <option value="西城区">西城区</option>
+                                <option value="朝阳区">朝阳区</option>
+                                <option value="海淀区">海淀区</option>
+                                <option value="丰台区">丰台区</option>
+                                <option value="石景山区">石景山区</option>
+                                <option value="门头沟区">门头沟区</option>
+                                <option value="房山区">房山区</option>
+                                <option value="通州区">通州区</option>
+                                <option value="顺义区">顺义区</option>
+                                <option value="大兴区">大兴区</option>
+                                <option value="昌平区">昌平区</option>
+                                <option value="平谷区">平谷区</option>
+                                <option value="怀柔区">怀柔区</option>
+                                <option value="密云县">密云县</option>
+                                <option value="延庆县">延庆县</option>
+                                <option value="城建集团">城建集团</option>
+                            </select></div><div class="selectric"><p class="label">所在区县</p><b class="button">▾</b></div><div class="selectric-items" tabindex="-1"><div class="selectric-scroll"><ul><li data-index="0" class="selected">所在区县</li><li data-index="1" class="">市属</li><li data-index="2" class="">东城区</li><li data-index="3" class="">西城区</li><li data-index="4" class="">朝阳区</li><li data-index="5" class="">海淀区</li><li data-index="6" class="">丰台区</li><li data-index="7" class="">石景山区</li><li data-index="8" class="">门头沟区</li><li data-index="9" class="">房山区</li><li data-index="10" class="">通州区</li><li data-index="11" class="">顺义区</li><li data-index="12" class="">大兴区</li><li data-index="13" class="">昌平区</li><li data-index="14" class="">平谷区</li><li data-index="15" class="">怀柔区</li><li data-index="16" class="">密云县</li><li data-index="17" class="">延庆县</li><li data-index="18" class="last">城建集团</li></ul></div></div><input class="selectric-input" tabindex="0"></div>
+                            </div>
+                            <div class="item sele-1">
+                            <div class="selectric-wrapper"><div class="selectric-hide-select"><select name="select5" id="select5" tabindex="0">
+                              <option value="">公园类型</option>
+                              <option value="城市公园">城市公园</option>
+                            <option value="郊野公园">郊野公园</option>
+                            <option value="森林公园">森林公园</option>
+                            <option value="风景名胜">风景名胜</option>
+                            </select></div><div class="selectric"><p class="label">公园类型</p><b class="button">▾</b></div><div class="selectric-items" tabindex="-1"><div class="selectric-scroll"><ul><li data-index="0" class="selected">公园类型</li><li data-index="1" class="">城市公园</li><li data-index="2" class="">郊野公园</li><li data-index="3" class="">森林公园</li><li data-index="4" class="last">风景名胜</li></ul></div></div><input class="selectric-input" tabindex="0"></div>
+                            </div>
+                            <div class="item">
+                                <input name="textfield5" id="textfield5" onclick="clear1()" type="text" placeholder="关键词" value="关键词" class="nrb">
+                                <button onclick="javascript:send1();" class="searchbtn motion">查询</button>
+                            </div>
+                            <div class="item"><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/gyxx/?key=&amp;leixing=&amp;quxian=&amp;name=&amp;add=&amp;fee=&amp;sheshi=&amp;hua=" target="_blank" class="advsearch">高级查询 &gt;</a></div>
+                        </div>
+                        <!--/form-->
+                    </li>
+                    <li style="display: none;">
+                    	<!--form action="" method="get"-->
+                        <div class="search clearfix">
+                            <div class="item sele-1">
+                            <div class="selectric-wrapper"><div class="selectric-hide-select"><select name="quxian1" id="quxian1" tabindex="0">
+                            	<option value="">所在区县</option>
+                              	 <option value="">北京市</option>
+                    <!--OPTION value=东城区>东城区</OPTION>
+                    <OPTION  value=西城区>西城区</OPTION>
+                    <OPTION value=崇文区>崇文区</OPTION> 
+                    <OPTION value=宣武区>宣武区</OPTION--> 
+                    <option value="朝阳区">朝阳区</option> 
+                    <option value="海淀区">海淀区</option> 
+                    <option value="丰台区">丰台区</option> 
+                    <option value="石景山区">石景山区</option>
+                    <option value="门头沟区">门头沟区</option>
+                    <option value="房山区">房山区</option> 
+                    <option value="通州区">通州区</option> 
+                    <option value="顺义区">顺义区</option> 
+                    <option value="大兴区">大兴区</option> 
+                    <option value="昌平区">昌平区</option> 
+                    <option value="平谷区">平谷区</option> 
+                    <option value="怀柔区">怀柔区</option> 
+                    <option value="密云县">密云县</option> 
+                    <option value="延庆县">延庆县</option>
+
+                            </select></div><div class="selectric"><p class="label">所在区县</p><b class="button">▾</b></div><div class="selectric-items" tabindex="-1"><div class="selectric-scroll"><ul><li data-index="0" class="selected">所在区县</li><li data-index="1" class="">北京市</li><li data-index="2" class="">朝阳区</li><li data-index="3" class="">海淀区</li><li data-index="4" class="">丰台区</li><li data-index="5" class="">石景山区</li><li data-index="6" class="">门头沟区</li><li data-index="7" class="">房山区</li><li data-index="8" class="">通州区</li><li data-index="9" class="">顺义区</li><li data-index="10" class="">大兴区</li><li data-index="11" class="">昌平区</li><li data-index="12" class="">平谷区</li><li data-index="13" class="">怀柔区</li><li data-index="14" class="">密云县</li><li data-index="15" class="last">延庆县</li></ul></div></div><input class="selectric-input" tabindex="0"></div>
+                            </div>
+                            <div class="item">
+                            	<input name="fruitType" id="fruitType" type="text" placeholder="果品" class="l-1">
+                            </div>
+                            <div class="item">
+                            	<input name="gardenName" id="gardenName" type="text" placeholder="果园名称" class="l-1">
+                            </div>
+                            <div class="item">
+                            	<input name="gardenAddress" id="gardenAddress" type="text" placeholder="果园地址" class="l-1">
+                            </div>
+                            <div class="item">
+                                <input name="keyword" id="keyword" type="text" placeholder="关键词" class="l-2 nrb">
+                                <button id="btnSend" name="btnSend" onclick="send()" class="searchbtn motion">查询</button>
+                            </div>
+                        </div>
+                        <!--/form-->
+                    </li>
+                     <li style="display: none;">
+                     	<!--form-->
+                        <div class="search clearfix">
+                            <div class="item sele-1">
+                            <div class="selectric-wrapper"><div class="selectric-hide-select"><select name="select4" id="LawType" tabindex="0">
+                             <option value="">选择类别</option>
+                                <option value="法律">法律</option>
+                                <option value="法规">法规</option>
+                                <option value="规章">规章</option>
+                                <option value="规范性文件">规范性文件</option>
+                                <option value="地方标准">地方标准</option>
+                                <option value="其他文件">其他文件</option>
+                            </select></div><div class="selectric"><p class="label">选择类别</p><b class="button">▾</b></div><div class="selectric-items" tabindex="-1"><div class="selectric-scroll"><ul><li data-index="0" class="selected">选择类别</li><li data-index="1" class="">法律</li><li data-index="2" class="">法规</li><li data-index="3" class="">规章</li><li data-index="4" class="">规范性文件</li><li data-index="5" class="">地方标准</li><li data-index="6" class="last">其他文件</li></ul></div></div><input class="selectric-input" tabindex="0"></div>
+                            
+                            </div>
+                            <div class="item">
+                           		<input name="textfield5" id="LawName" type="text" placeholder="法规名称" class="l-2">
+                            </div>
+                            <div class="item">
+                           		<input name="textfield7" id="LawNo" type="text" placeholder="文号" class="l-1">
+                            </div>
+                            <div class="item">
+                           		<input name="textfield6" id="LawSource" type="text" placeholder="发布单位" class="l-1">
+                            </div>
+                            <div class="item">
+                                <input name="textfield8" id="LawKeyword" type="text" placeholder="关键词" class="nrb l-1">
+                                <button onclick="sendflfg();" name="imageField5" id="imageField" class="searchbtn motion">查询</button>
+                            </div>
+                        </div>
+                        <!--/form-->
+                    </li>
+                     <li style="display: none;">
+       
+                        <div class="search clearfix">
+                            <div class="item">
+                            <input name="zjname" id="zjname" type="text" placeholder="姓名" class="l-1">
+                            </div>
+                            <div class="item">
+                            <input name="textfield7" type="text" id="zhuany" placeholder="专业" class="l-3">
+                            </div>
+                            <div class="item">
+                            <input name="textfield6" type="text" id="zhic" placeholder="职称" class="l-2">
+                            </div>
+                            <div class="item">
+                                <input name="textfield8" type="text" id="guanjianzi" placeholder="关键词" class="l-4 nrb">
+                                <button class="searchbtn motion" onclick="sendzjk(&#39;&#39;);">查询</button>
+                            </div>
+                        </div>
+             
+                    </li>
+                </ul>
+               <div class="itemlist clearfix">
+            	<div class="item clearfix">
+                	<div class="itemtitle">公园分类：</div>
+                    <ul class="clearfix"> 
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/cs/" target="_blank">城市公园</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/fj/" target="_blank">风景名胜</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/sl/" target="_blank">森林公园</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/jygy201604/" target="_blank">郊野公园</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/gggy/" target="_blank">观光果园</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/jpgyxb/" target="_blank">精品公园</a></li>
+                    </ul>
+                </div>
+                <div class="item clearfix">
+                	<div class="itemtitle">季节游览：</div>
+                    <ul class="clearfix">
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/tj/tqsh/jcshhqczzt/" target="_blank">踏青赏花</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/tj/2016sxbs/" target="_blank">盛夏避暑</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/tj/2016nxsh/" target="_blank">宁夏赏荷</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/tj/qssy/" target="_blank">秋色赏叶</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/tj/djwhhd/" target="_blank">冬季活动</a></li> </ul>
+                </div>
+                <div class="item clearfix">
+                	<div class="itemtitle">特色活动：</div>
+                    <ul class="clearfix">
+
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/tj/cjmsmh/" target="_blank">民俗庙会</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/tj/etyyzt/" target="_blank">儿童天地</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/tj/gqwhhd/" target="_blank">十一活动</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/gyfjqyl/tj/hqrl1/" target="_blank">花期日历</a></li>
+                    	<li><a href="http://www.beijingmap.gov.cn/bjyl/" target="_blank">电子地图</a></li>
+                    </ul>
+                </div>
+                <div class="line"></div>
+                 <div class="item clearfix">                                         
+                	<div class="itemtitle">园林知识：</div>
+                    <ul class="clearfix">
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/slhxdjyb/" target="_blank">森林火险等级预报</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/aqyjzs/" target="_blank">安全常识</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/fzbch/" target="_blank">有害生物防治小常识</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/ysdwjh/" target="_blank">野生动物救护机构</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/zwyy/" target="_blank">植物园艺</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/sdlh/ylkj/yllhhyzjcx/" target="_blank">专家库查询</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/ggfw/jtyhzs/" target="_blank">家庭养花知识</a></li>
+                    	<li><a href="http://www.bjyl.gov.cn/sdlh/yhsw/yhswfz/201608/t20160825_183526.shtml" target="_blank">林业有害生物咨询</a></li>
+                    </ul>
+                </div>
+            
+            	</div>   
+            </div>
+          <div class="exchange">
+           		<h2><a href="http://www.bjyl.gov.cn/hdjl/" style="font-size: 18px; padding-left:0px;" target="_blank">互动交流</a>
+<span class="complain">咨询投诉电话：<b>84236685 / 84236686</b></span><span class="extra">
+<a href="http://www.bjyl.gov.cn/hdjl/zxts/jyyzx/index_1332.shtml" target="_blank">建议咨询</a><a href="http://www.bjyl.gov.cn/hdjl/zxts/ldxx/index_1332.shtml" target="_blank">领导信箱</a><a href="http://www.bjyl.gov.cn/hdjl/zxts/jt/index_1332.shtml" target="_blank">举报投诉</a><a href="http://www.bjyl.gov.cn/hdjl/zxft/" target="_blank"> 在线访谈</a><a href="http://www.bjyl.gov.cn/hdjl/dczj/" target="_blank">调查与征集</a><a href="http://www.bjyl.gov.cn/hdjl/ysqgk/" target="_blank">网上申请依申请公开</a></span></h2>
+                <div class="exchangewraper">
+                <div class="mail">
+					<h3><a class="more" href="http://www.bjyl.gov.cn/hdjl/zxts/" target="_blank">+ 更多</a>来信选登</h3>
+                    <ul>
+                        <li class="itemtitle">
+                            <div class="col-1">来信时间</div>
+                            <div class="col-2">内容</div>
+                        </li>
+ 
+                         <li>
+                            <div class="col-1">2016.11.09</div>
+                            <div class="col-2"><a href="http://www.bjyl.gov.cn/hdjl/zxts/jyyzx/201611/t20161109_185670.shtml" target="_blank">关于清理瑞苑小区北墙外枯死树枝消除安全隐患<!--1--></a></div>
+                        </li>
+ 
+                         <li>
+                            <div class="col-1">2016.11.02</div>
+                            <div class="col-2"><a href="http://www.bjyl.gov.cn/hdjl/zxts/jyyzx/201611/t20161102_185467.shtml" target="_blank">林权证信息确认<!--1--></a></div>
+                        </li>
+ 
+                         <li>
+                            <div class="col-1">2016.11.01</div>
+                            <div class="col-2"><a href="http://www.bjyl.gov.cn/hdjl/zxts/jt/201611/t20161101_185381.shtml" target="_blank">投诉贵局下属单位北京金福腾科技有限公司<!--1--></a></div>
+                        </li>
+ 
+                         <li>
+                            <div class="col-1">2016.10.12</div>
+                            <div class="col-2"><a href="http://www.bjyl.gov.cn/hdjl/zxts/jyyzx/201610/t20161012_184844.shtml" target="_blank">想查询北师大附近的古柏树情况，谢谢！建议开放古树数据库查询<!--1--></a></div>
+                        </li>
+              
+                    </ul>
+                    <a href="http://210.73.79.52:8081/infogate/customer/user_loginn.html" target="_blank" class="writemail motion"><i class="icon-mail-alt"></i> 我要写信</a>
+                </div>
+                <div class="focusus clearfix">
+               	  <h3>关注我们</h3>
+                	<div><img src="./首都园林绿化政务网_files/w_wb.jpg">
+                    <span>官方微博</span>
+                    </div>
+                    <div>
+                    <img src="./首都园林绿化政务网_files/w_wx.jpg">
+                    <span>官方微信</span>
+                    </div>
+                </div>
+			</div>
+          </div>
+        </section>
+        <section class="column-2">
+       	  <div class="mod">
+            	<h2><a href="http://www.bjyl.gov.cn/sdlh/" target="_blank">首都绿化</a></h2>
+            <ul class="channellist clearfix"> 
+
+                	<li><a href="http://www.bjyl.gov.cn/sdlh/2011zszt/" target="_blank">义务植树</a> </li>
+
+                	<li><a href="http://www.bjyl.gov.cn/sdlh/bjslfh/" target="_blank">森林防火</a> </li>
+
+                	<li><a href="http://www.bjyl.gov.cn/sdlh/jkld/" target="_blank">健康绿道</a> </li>
+
+                	<li><a href="http://www.bjyl.gov.cn/sdlh/bhsdbhdqzs/" target="_blank">湿地保护</a> </li>
+
+                	<li><a href="http://www.bjyl.gov.cn/sdlh/ldgs/" target="_blank">绿线公示</a> </li>
+
+                	<li><a href="http://www.bjyl.gov.cn/sdlh/ylkj/" target="_blank">园林科技</a> </li>
+
+                </ul>
+              <ul class="piclist clearfix">
+
+<li><a href="http://www.bjyl.gov.cn/sdlh/bjslfh/" target="_blank"><img src="./首都园林绿化政务网_files/W020151012563830096572.jpg" title="森林防火"></a></li> 
+
+
+<li><a href="http://www.bjyl.gov.cn/sdlh/bjs20wmzlgc/" target="_blank"><img src="./首都园林绿化政务网_files/W020151012563686428291.jpg" title="平原造林"></a></li> 
+
+
+<li><a href="http://www.bjyl.gov.cn/sdlh/lsxrhxc/" target="_blank"><img src="./首都园林绿化政务网_files/W020151012563684085547.jpg" title="滨河森林公园"></a></li> 
+
+
+<li><a href="http://www.bjyl.gov.cn/sdlh/yhsw/yhswfz/" target="_blank"><img src="./首都园林绿化政务网_files/W020151012563597656967.jpg" title="有害生物防治"></a></li> 
+
+
+<li><a href="http://www.bjyl.gov.cn/sdlh/lmldrjry/" target="_blank"><img src="./首都园林绿化政务网_files/W020151012544348691707.jpg" title="认建认养"></a></li> 
+
+
+<li><a href="http://www.bjyl.gov.cn/sdlh/jkld/" target="_blank"><img src="./首都园林绿化政务网_files/W020151012563832431357.jpg" title="健康绿道"></a></li> 
+
+
+               	  
+              </ul>
+              <div class="fire clearfix">
+              		<div class="firewraper">
+                      <a href="http://www.bjyl.gov.cn/ggfw/slhxdjyb/201602/t20160219_176978.shtml" target="_blank"><div class="col-1">3</div>
+                        <div class="col-2">森林火险等级
+                        <span>级</span></div>
+                  </a><div class="col-3"><a href="http://www.bjyl.gov.cn/ggfw/slhxdjyb/201602/t20160219_176978.shtml" target="_blank">风向北转南<br>
+                        2、3级</a> 
+                        </div>
+                    </div>
+              </div>
+            </div>
+            <div class="mod">
+            	<h2><a class="more" href="http://www.bjyl.gov.cn/ztxx/" target="_blank">+ 更多</a><a href="http://www.bjyl.gov.cn/ztxx/" target="_blank">专题专栏</a></h2>
+              <ul class="speciallist clearfix">
+
+               	  <li><a href="http://www.bjyl.gov.cn/ztxx/lhxw/hydt/" target="_blank"><i class="icon-angle-right"></i> 园林绿化行业动态 </a></li>
+               	 
+
+               	  <li><a href="http://smartforest.forestry.gov.cn/cn/" target="_blank"><i class="icon-angle-right"></i> 中国信息林 </a></li>
+               	 
+
+               	  <li><a href="http://www.bjyl.gov.cn/ztxx/jtlqzdgg/" target="_blank"><i class="icon-angle-right"></i> 北京市集体林权制度改革政策解读 </a></li>
+               	 
+
+               	  <li><a href="http://www.bfca.net.cn/" target="_blank"><i class="icon-angle-right"></i> 推进林业碳汇 应对气候变化 </a></li>
+               	 
+
+               	  <li><a href="http://www.bjyl.gov.cn/sdlh/lmldrjry/" target="_blank"><i class="icon-angle-right"></i> 林木绿地认建认养 </a></li>
+               	 
+
+              </ul>
+              <div class="sgallery">
+                  <ul class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+
+                    <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 3460px; left: 0px; display: block; transition: all 800ms ease; transform: translate3d(-346px, 0px, 0px);"><div class="owl-item" style="width: 346px;"><li><a href="http://shipin.beijing.gov.cn/html/ItemId27/2016-09-27/8382.html" target="_blank"><img src="./首都园林绿化政务网_files/W020161011358067357221.jpg" title="市园林绿化局谈“走进森林 感受绿和美”"> </a></li></div><div class="owl-item active" style="width: 346px;"><li><a href="http://shipin.beijing.gov.cn/index.php?option=com_content&amp;id=8348" target="_blank"><img src="./首都园林绿化政务网_files/W020160923432219567485.jpg" title="市园林绿化局谈“森林体验教育”"> </a></li></div><div class="owl-item active" style="width: 346px;"><li><a href="http://www.bjyl.gov.cn/ztxx/bjhx/" target="_blank"><img src="./首都园林绿化政务网_files/W020160419423300598003.jpg" title="北京花讯"> </a></li></div><div class="owl-item" style="width: 346px;"><li><a href="http://www.bjyl.gov.cn/sdlh/jjjlylhxtfz/" target="_blank"><img src="./首都园林绿化政务网_files/W020151204336556985614.jpg" title="京津冀生态建设协同发展"> </a></li></div><div class="owl-item" style="width: 346px;"><li><a href="http://www.bjyl.gov.cn/ztxx/zqxx/" target="_blank"><img src="./首都园林绿化政务网_files/W020151126616979588748.jpg" title="职权信息"> </a></li></div></div></div>
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+
+                  <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div></ul>
+              </div>
+            </div>
+        </section>
+   </div>
+</div>
+<footer>
+	<div class="mainWrap clearfix">
+    	<div class="col-1">
+         <div class="wraper">
+   	    	<img src="./首都园林绿化政务网_files/lf_46.png">
+            <div class="copyright">
+                主办 北京市园林绿化局 首都绿化委员会办公室<br>    
+                承办 北京市园林绿化局信息中心  
+                <span>办公地址 北京市东城区安外小黄庄北街1号　邮编 100013<br>    
+                电子信箱  <a href="mailto:bjyl@bjyl.gov.cn">bjyl@bjyl.gov.cn</a>　电话 010-84273060　
+            	</span>
+            </div>
+           </div>
+        </div>
+        <div class="col-2">
+        	<div class="wraper">
+             <a href="http://bszs.conac.cn/sitename?method=show&amp;id=084560CEF89F5B37E053022819AC8C5D"><img src="./首都园林绿化政务网_files/lf_49.png"></a>
+                <span class="icp">
+                   <a href="http://www.miitbeian.gov.cn/" target="_blank"> 京ICP备12017819 <br></a>
+                    京公网安备11010102001487号
+                </span>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="wraper">
+                <h3>友情链接</h3>
+                 	<div class="selectric-wrapper"><div class="selectric-hide-select"><select name="" tabindex="0">
+                          <option value="">相关政务网站</option>
+                            <option value="http://www.gov.cn/">中央政府网站</option>
+                            <option value="http://www.mohurd.gov.cn/">住房城乡建设部</option>
+                            <option value="http://www.forestry.gov.cn/">国家林业局</option>
+                            <option value="http://www.beijing.gov.cn/sdzcwzqdh_1/bgtlzhym/default.htm">市政府办公厅</option>
+                            <option value="http://www.bjpc.gov.cn/">市发展改革委</option>
+                            <option value="http://www.bjedu.gov.cn/">市教委</option>
+                            <option value="http://www.bjkw.gov.cn">市科委</option>
+                            <option value="http://www.beijingit.gov.cn/index.htm">市经济信息化委</option>
+                            <option value="http://www.bjethnic.gov.cn/">市民委</option>
+                            <option value="http://www.bjgaj.gov.cn/">市公安局</option>
+                            <option value="http://www.bjsupervision.gov.cn/">市监察局</option>
+                            <option value="http://www.bjmzj.gov.cn/">市民政局</option>
+                            <option value="http://www.bjsf.gov.cn/">市司法局</option>
+                            <option value="http://www.bjcz.gov.cn/">市财政局</option>
+                            <option value="http://www.bjrbj.gov.cn/">市人力社保局</option>
+                            <option value="http://www.bjgtj.gov.cn/">市国土局</option>
+                            <option value="http://www.bjepb.gov.cn/">市环保局</option>
+                            <option value="http://www.bjghw.gov.cn/">市规划委</option>
+                            <option value="http://www.bjjs.gov.cn/">市住房城乡建设委</option>
+                            <option value="http://www.bjmac.gov.cn/">市市政市容委</option>
+                            <option value="http://www.bjjtw.gov.cn">市交通委</option>
+                            <option value="http://www.bjnw.gov.cn">市农委</option>
+                            <option value="http://www.bjwater.gov.cn">市水务局</option>
+                            <option value="http://www.bjmbc.gov.cn">市商务委</option>
+                            <option value="http://www.bjta.gov.cn/">市旅游委</option>
+                            <option value="http://www.bjwh.gov.cn">市文化局</option>
+                            <option value="http://www.bjhb.gov.cn/">市卫生计生委</option>
+                            <option value="http://www.bjab.gov.cn/">市审计局</option>
+                            <option value="http://www.bjfao.gov.cn">市政府外办</option>
+                            <option value="http://www.bjshjs.gov.cn/">市社会办</option>
+                            <option value="http://www.bjgzw.gov.cn">市国资委</option>
+                            <option value="http://www.tax861.gov.cn/">市地税局</option>
+                            <option value="http://www.baic.gov.cn/">市工商局</option>
+                            <option value="http://www.bjtsb.gov.cn/">市质监局</option>
+                            <option value="http://www.bjsafety.gov.cn/">市安全监管局</option>
+                            <option value="http://www.bjrt.gov.cn/jump.html">市新闻出版广电局</option>
+                            <option value="http://www.bjww.gov.cn/">市文物局</option>
+                            <option value="http://www.bjsports.gov.cn/">市体育局</option>
+                            <option value="http://www.bjstats.gov.cn/">市统计局</option>
+                            <option value="http://www.bjyl.gov.cn">市园林绿化局</option>
+                            <option value="http://www.beijing.gov.cn/htm/jrgzj.htm">市金融局</option>
+                            <option value="http://www.bjipo.gov.cn/">市知识产权局</option>
+                            <option value="http://www.bjrf.gov.cn/">市民防局</option>
+                            <option value="http://www.bjqb.gov.cn/">市政府侨办</option>
+                            <option value="http://www.bjfzb.gov.cn/">市政府法制办</option>
+                            <option value="http://www.bjxfb.gov.cn/">市信访办</option>
+                            <option value="http://www.bjyjs.gov.cn/">市政府研究室</option>
+                 </select></div><div class="selectric"><p class="label">相关政务网站</p><b class="button">▾</b></div><div class="selectric-items" tabindex="-1"><div class="selectric-scroll"><ul><li data-index="0" class="selected">相关政务网站</li><li data-index="1" class="">中央政府网站</li><li data-index="2" class="">住房城乡建设部</li><li data-index="3" class="">国家林业局</li><li data-index="4" class="">市政府办公厅</li><li data-index="5" class="">市发展改革委</li><li data-index="6" class="">市教委</li><li data-index="7" class="">市科委</li><li data-index="8" class="">市经济信息化委</li><li data-index="9" class="">市民委</li><li data-index="10" class="">市公安局</li><li data-index="11" class="">市监察局</li><li data-index="12" class="">市民政局</li><li data-index="13" class="">市司法局</li><li data-index="14" class="">市财政局</li><li data-index="15" class="">市人力社保局</li><li data-index="16" class="">市国土局</li><li data-index="17" class="">市环保局</li><li data-index="18" class="">市规划委</li><li data-index="19" class="">市住房城乡建设委</li><li data-index="20" class="">市市政市容委</li><li data-index="21" class="">市交通委</li><li data-index="22" class="">市农委</li><li data-index="23" class="">市水务局</li><li data-index="24" class="">市商务委</li><li data-index="25" class="">市旅游委</li><li data-index="26" class="">市文化局</li><li data-index="27" class="">市卫生计生委</li><li data-index="28" class="">市审计局</li><li data-index="29" class="">市政府外办</li><li data-index="30" class="">市社会办</li><li data-index="31" class="">市国资委</li><li data-index="32" class="">市地税局</li><li data-index="33" class="">市工商局</li><li data-index="34" class="">市质监局</li><li data-index="35" class="">市安全监管局</li><li data-index="36" class="">市新闻出版广电局</li><li data-index="37" class="">市文物局</li><li data-index="38" class="">市体育局</li><li data-index="39" class="">市统计局</li><li data-index="40" class="">市园林绿化局</li><li data-index="41" class="">市金融局</li><li data-index="42" class="">市知识产权局</li><li data-index="43" class="">市民防局</li><li data-index="44" class="">市政府侨办</li><li data-index="45" class="">市政府法制办</li><li data-index="46" class="">市信访办</li><li data-index="47" class="last">市政府研究室</li></ul></div></div><input class="selectric-input" tabindex="0"></div> <div class="btmsitemap" style="padding-top:20px"><a href="http://www.bjyl.gov.cn/wzdt/" target="_blank">网站地图 <i class="icon-angle-right"></i></a></div>
+           </div>
+        </div>
+    </div>
+<script src="./首都园林绿化政务网_files/gs.js.下载" language="JavaScript"></script>
+</footer>
+
+<div class="pika-single is-hidden is-bound" style="position: static; left: auto; top: auto;"></div><div class="pika-single is-hidden is-bound" style="position: static; left: auto; top: auto;"></div></body></html>

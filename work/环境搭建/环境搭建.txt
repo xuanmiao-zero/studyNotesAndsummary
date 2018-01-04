@@ -1,0 +1,5 @@
+npm init -g react-native-cli
+react-native init 项目名(大驼峰)
+cd 项目名
+react-native start
+使用浏览器访问http://localhost:8081/index.bundle?platform=android查看打包后的脚本

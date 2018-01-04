@@ -1,0 +1,1527 @@
+@charset "utf-8";
+
+.content .column-1
+{
+	width:900px;
+	float:left
+}
+
+.content .column-2
+{
+	width:300px;
+	float:left;
+	padding-top: 450px;
+}
+
+.content .goverment 
+{
+	position: absolute;
+	right: 0;
+	top:150px;
+	background: #fff;
+	width: 300px;
+}
+
+.content .goverment .govermentwraper
+{
+	border-bottom: 1px solid #e0e0e0;
+	background: url(../images/yl_15.png) repeat-x center bottom;
+}
+
+.content .goverment ul.switch
+{
+	background: #0074bd;
+	width: 100%;
+}
+
+.content .goverment ul.switch li
+{
+	float: left;
+	font-size: 14px;
+	color: #fff;
+	line-height: 54px;
+	height: 50px;
+	width: 33.33%;
+	background: #0074bd;
+	text-align: center;
+	cursor: pointer;
+}
+
+.content .goverment ul.switch li.current
+{
+	background: #fff;
+	color: #333;
+	border-top: 5px solid #0074bd;
+	line-height: 45px;
+	height: 45px;
+}
+
+.content .goverment ul.switch li a
+{
+	color: #fff;
+}
+
+.content .goverment ul.govlist
+{
+	padding:17px 0 17px 30px;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+}
+
+.content .goverment ul.govlist li
+{
+	float: left;
+	font-size: 13px;
+	width: 33.33%;
+	line-height: 30px;
+
+}
+
+.content .goverment .resultsearch
+{
+	border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    padding: 17px 0 26px 30px;
+}
+
+.content .goverment .resultsearch input
+{
+	border: 1px solid #ccc;
+	height: 36px;
+	line-height: 36px;
+	padding-left: 15px;
+	width: 95px;
+	margin-top: 15px;
+	*vertical-align: middle;
+
+}
+
+.content .goverment .resultsearch button
+{
+	background: #FF3600;
+	height: 38px;
+	width: 48px;
+	color: #fff;
+	border:0;
+	float: left;
+	line-height: 30px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.content .goverment .resultsearch .kyw
+{
+	float: left;
+	width: 170px;
+	border-right:0;
+	margin-top: 0;
+}
+
+.content .goverment .resultsearch div
+{
+	padding-top: 20px;
+}
+
+.content .goverment h2 span
+{
+	background: #fff url(../images/icon.png) no-repeat  27px 13px;
+	display: inline-block;
+	padding: 18px 30px 8px 65px;
+	font-size: 18px;
+	border:1px solid #e0e0e0;
+	border-bottom: 0;
+	position: relative;
+	top: 1px;
+}
+
+.content .column-1 .newsmod .tmlist strong i
+{
+	display:block;
+	font-size:12px;
+	color:#999;
+	font-style:normal;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5) {
+
+	.content .goverment h2 span
+	{
+	    background: url(../images/icon-pad.png) no-repeat -9px -10px;
+	    background-size:212px 148px;
+	}	
+
+}
+
+
+.content .goverment h2
+{
+	border-bottom: 1px solid #e0e0e0;
+	text-align: center;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+}
+
+.content .goverment .govitemlist-1,.content .goverment .govitemlist-2
+{
+	padding: 15px 0 15px 30px;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+}
+
+.content .goverment .govitemlist-1 li
+{
+	float: left;
+	width: 50%;
+	line-height: 34px;
+
+}
+
+.content .goverment .govitemlist-2 li
+{
+	float: left;
+	width: 33.33%;
+	line-height: 34px;
+
+}
+
+.content .goverment .govitemlist-2 li.wide
+{
+	width: 100%;
+}
+
+.content .goverment  .line
+{
+	border-bottom: 1px solid #e0e0e0;
+	margin:0 30px; 
+}
+
+.content .goverment .govitemlist-2
+{
+	padding-bottom: 30px;
+}
+
+.content .adv img
+{
+	width: 100%;
+}
+
+.content  .adv .owl-wrapper li
+{
+	*float: left;
+}
+
+.content  .adv .owl-pagination
+{
+	bottom: 20px;
+    position: absolute;
+    text-align: center;
+    width: 75%;
+}
+
+.content  .adv .owl-page {
+    display: inline-block;
+	*zoom: 1;
+	*display: inline;    
+}
+
+
+.content .adv .owl-page span {
+    border:1px solid #fff;
+    background: #a7b4b4;
+    border-radius: 8px;
+    display: block;
+    height: 12px;
+    margin: 0 7px;
+    outline: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 12px;
+}
+
+.content .adv .owl-page.active span
+{
+	background: #f85a0d
+}
+
+.content .column-1 .newsmod
+{
+	float: left;
+	width: 50%;
+}
+
+.content .column-1 .newsmod .newsmodwraper
+{
+	padding-right: 50px;
+}
+
+.content .column-1 .newsmod h2
+{
+	font-size: 18px;
+	line-height: 3.25em;
+	padding-top:0.75em;
+	border-bottom: 1px solid #018f37;
+}
+
+.content .column-1 .newsmod h2 .more
+{
+	float: right;
+	font-size: 12px;
+	color: #a7b4b4;
+}
+
+.content .column-1 .newsmod h2 .switch li
+{
+	float: left;
+	cursor: pointer;
+	margin-right:30px;
+	color:#999;
+}
+
+.content .column-1 .newsmod h2 .switch li.current
+{
+	color:#444;
+	border-bottom:1px solid #018f37;
+}
+
+.content .column-1 .newsmod .special h3
+{
+	font-size: 18px;
+	text-align: center;
+	line-height: 1.25em;
+	padding: 20px 0;
+	color: #018f37;
+}
+
+.content .column-1 .newsmod .special p
+{
+	color: #706962;
+}
+
+.content .column-1 .newsmod .special a:hover h3
+{
+	color: #0074bd;
+}
+
+.content .column-1 .newsmod .special
+{
+	border-bottom: 1px solid #e0e0e0;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.content .column-1 .newsmod .enlist a
+{
+	font-size: 14px;
+	line-height: 1.5em;
+	display: block;;
+}
+
+.content .column-1 .newsmod .enlist a i
+{
+	float: right;
+	margin-left: 10px;
+	color: #c4bbb3;
+	line-height: 18px;
+}
+
+.content .column-1 .newsmod .enlist a:hover i
+{
+	color: #0074bd;
+}
+
+.content .column-1 .newsmod .enlist li
+{
+	padding-bottom:10px;
+}
+
+.content .column-1 .newsmod .tmlist a
+{
+	font-size: 14px;
+	line-height: 1.5em;
+	display: block;;
+}
+
+.content .column-1 .newsmod .tmlist li
+{
+	padding:16px 0;
+	border-top: 1px solid #e0e0e0;
+}
+
+.content .column-1 .newsmod .tmlist li:first-child
+{
+	border:0;
+}
+
+.content .column-1 .newsmod .tmlist li.special 
+{
+	margin:0;
+}
+
+.content .column-1 .newsmod .tmlist li.special span
+{
+	color: #018f37;
+}
+
+.content .column-1 .newsmod .tmlist span b
+{
+	display: block;
+	font-size: 30px;
+	line-height: 1em;
+	font-weight: bold;
+}
+
+.content .column-1 .newsmod .tmlist span
+{
+	font-size: 10px;
+	display: inline-block;
+	width: 46px;
+	text-align: center;
+	float: left;
+	color: #a3bec5;
+	font-family: arial;
+	line-height: 12px;
+}
+
+.content .column-1 .newsmod .tmlist span em
+{
+	font-style: normal;
+	-webkit-transform: scale(0.85); 
+	display: block;
+}
+
+.content .column-1 .newsmod .tmlist strong
+{
+	font-weight: normal;
+	display: block;
+	margin-left: 60px;
+}
+
+.content .column-1 .commpop
+{
+	border: 1px solid #e0e0e0;
+	margin-top: 30px;
+	margin-right: 50px;
+	padding-right: 20px;
+	padding-left: 25px;
+}
+
+.content .column-1 .commpop li
+{
+	float: left;
+	width: 33.33%;
+}
+
+.content .column-1 .commpop .popwraper
+{
+	padding: 20px 0px 20px 0px;
+}
+
+.content .column-1 .commpop span
+{
+	background: url(../images/icon.png) no-repeat;
+	display: inline-block;
+	float: left;
+	width: 47px;
+	height: 47px;
+	margin-right: 12px;
+	margin-bottom: 15px;
+}
+
+.content .column-1 .commpop a
+{
+	color:#3A8D52;
+}
+
+.content .column-1 .commpop a:hover
+{
+	color: #545454
+}
+
+.content .column-1 .commpop span.item-1
+{
+	background-position: -126px -64px;
+}
+
+.content .column-1 .commpop span.item-2
+{
+	background-position: -62px -64px;
+}
+
+.content .column-1 .commpop span.item-3
+{
+	background-position: 0 -64px;
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5) {
+
+	.content .column-1 .commpop span
+	{
+	    background: url(../images/icon-pad.png) no-repeat;
+	    background-size:212px 148px;
+	}
+
+	.content .column-1 .commpop span.item-1
+	{
+		background-position: -23px -79px;
+	}
+
+	.content .column-1 .commpop span.item-2
+	{
+		background-position: -85px -79px;
+	}
+
+	.content .column-1 .commpop span.item-3
+	{
+		background-position: -146px -79px;
+	}
+
+}
+
+
+.content .column-1 .commpop a
+{
+	display: inline-block;
+	white-space: nowrap;
+	line-height: 24px;
+	padding: 0 5px;
+}
+
+.content .conven ul.switch
+{
+	background: #0074bd;
+	padding-left: 1px;
+}
+
+.content .conven .subsmenu {
+    background: #055A93;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    font-size: 14px;
+    height: 40px;
+    line-height:40px;
+    text-align: center;
+    width: 40px;
+    display: none;
+}
+
+.content .conven ul.switch li
+{
+	float: left;
+	font-size: 14px;
+	color: #fff;
+	line-height: 44px;
+	height: 40px;
+	background: #0074bd;
+	text-align: center;
+	cursor: pointer;
+	padding: 0 35px;
+}
+
+.content .conven ul.switch li.current
+{
+	background: #fff;
+	color: #504a45;
+	border-top: 5px solid #0074bd;
+	line-height: 38px;
+	height: 35px;
+}
+
+.content .conven h2
+{
+	font-size: 18px;
+	line-height: 3.25em;
+	padding-top: 0.75em;
+}
+
+.content .conven .search
+{
+	padding: 12px 0 22px 0;
+}
+
+.content .conven .search .item
+{
+	float: left;
+	margin-right: 15px;
+	padding-top: 10px;
+}
+
+.content .conven .search input
+{
+	border:1px solid #ccc;
+	height: 36px;
+	line-height: 36px;
+	padding-left:15px;
+	float: left;
+	width: 250px;
+}
+
+.content .conven .search input.nrb
+{
+	border-right: 0;
+}
+
+.content .conven .search input.l-1
+{
+	width: 100px;
+}
+
+.content .conven .search input.l-2
+{
+	width: 150px;
+}
+
+.content .conven .search input.l-3
+{
+	width: 147px;
+}
+
+
+.content .conven .search a
+{
+	line-height: 38px;
+	color: #8c857e;
+}
+
+.content .conven .search a.advsearch
+{
+	margin-left: 5px;
+}
+
+.content .conven .search .searchbtn
+{
+	background: #018f37;
+	height: 38px;
+	line-height: 38px;
+	display: inline-block;
+	float: left;
+	font-size: 14px;
+	color: #fff;
+	border: 0;
+	width: 68px;
+	text-align: center;
+	font-family:"\5FAE\8F6F\96C5\9ED1",STHeiti;
+}
+
+.content .conven .search .searchbtn:hover
+{
+	background: #FF3600;
+}
+
+
+.content .sele-1
+{
+	width: 180px;
+	*width:178px;
+}
+
+.content select
+{
+	height: 38px;
+	border:1px solid #ccc;
+	width: 100%;
+	padding-left: 15px;
+	text-align: center;
+}
+
+.content .conven
+{
+	margin-right: 50px;
+}
+
+.content .conven .itemlist
+{
+	border-top:2px solid #e0e0e0;
+	padding: 20px 0;
+	font-size: 14px;
+	line-height: 26px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.content .conven .itemlist .item .itemtitle
+{
+	float: left;
+	width: 14%;
+	color: #6c645c;
+}
+
+.content .conven .itemlist .item li
+{
+	float: left;
+	margin-right: 42px;
+	white-space: nowrap;
+}
+
+.content .conven .itemlist .item ul
+{
+	width: 86%;
+	float: left;
+}
+
+.content .conven .itemlist .item 
+{
+	padding: 2px 0;
+}
+
+.content .conven .itemlist .line
+{
+	border-bottom: 1px solid #e0e0e0;
+	margin:16px 0;
+}
+
+.content .exchange
+{
+	margin-right: 50px;
+}
+
+.content .exchange .exchangewraper
+{
+	position: relative;
+}
+
+.content .exchange h2
+{
+	font-size: 18px;
+	line-height: 3.25em;
+	padding-top:0.75em;
+	border-bottom: 1px solid #018f37;
+	position: relative;
+}
+
+.content .exchange h2 .complain
+{
+	font-size: 12px;
+	color: #8f9090;
+	padding-left: 25px;
+	font-family: arial;
+}
+
+.content .exchange h2 .complain b
+{
+	color: #f85a0d	
+}
+
+.content .exchange h2 a
+{
+	font-size: 12px;
+	padding-left:16px;
+}
+
+.content .exchange h2 span.extra
+{
+	position: absolute;
+	right: 0;
+	*top: 0;
+}
+
+.content .exchange .mail
+{
+	margin-right: 157px;
+}
+
+.content .exchange .mail h3
+{
+	font-size: 16px;
+	line-height: 3.25em;
+	padding-top:0.75em;
+	border-bottom: 2px solid #8c999f;
+}
+
+.content .exchange .mail h3 a.more
+{
+	float: right;
+	font-size: 12px;
+	color: #a7b4b4;
+}
+
+.content .exchange .mail ul li
+{
+	padding: 15px 0;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.content .exchange .mail ul li.itemtitle div
+{
+	color: #ada6a6;
+	font-weight: bold;
+}
+
+.content .exchange .mail ul li.itemtitle
+{
+	border-color: #ccc;
+}
+
+.content .exchange .mail ul li .col-1
+{
+	float: left;
+	width: 100px;
+	color: #018f37;
+	font-family: arial;
+}
+
+.content .exchange .mail ul li .col-2
+{
+	margin-left: 100px;
+}
+
+.content .exchange .mail .writemail
+{
+	background: #018f37;
+	display:inline-block;
+	height: 36px;
+	line-height: 36px;
+	padding:0 20px;
+	color: #fff;
+	margin-top: 20px;
+}
+
+.content .exchange .mail .writemail:hover
+{
+	background: #FF3600
+}
+
+.content .exchange .focusus
+{
+	width: 107px;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.content .exchange .focusus h3
+{
+	font-size: 16px;
+	line-height: 3.25em;
+	padding-top:0.75em;
+}
+
+.content .exchange .focusus img
+{
+	margin: 5px 0;
+}
+
+.content .exchange .focusus span
+{
+	display: block;;
+	line-height: 30px;
+	padding-bottom: 10px;
+}
+
+.content .mod 
+{
+	border:1px solid #e0e0e0;
+	border-top-color: #018f37;
+	margin-bottom: 30px;
+}
+
+.content .mod h2
+{
+	font-size: 18px;
+	line-height: 4em;
+	padding: 0 30px;
+}
+
+.content .mod h2 a.more
+{
+	float: right;
+	font-size: 12px;
+	color: #a7b4b4;
+}
+
+.content .mod .channellist
+{
+	padding:0 0 0 30px;
+}
+
+.content .mod .channellist li
+{
+	float: left;
+	line-height: 26px;
+	width: 33.33%;
+}
+
+.content .mod .piclist 
+{
+	padding: 14px;
+}
+
+.content .mod .piclist li
+{
+	float: left;
+	width: 33.33%;
+	text-align: center;
+	padding: 8px 0;
+}
+
+.content .mod .piclist li a
+{
+	display: block;
+	padding:0 8px;
+}
+
+.content .mod .piclist li img
+{
+	width: 100%;
+}
+
+.content .mod .fire
+{
+	background: #f3f9f5 url(../images/yl_firebg.png) no-repeat right bottom;
+	padding: 20px 0 15px 0;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.content .mod .fire .firewraper
+{
+	display: inline-block;
+	text-align: left;
+	*display: inline;
+	*zoom:1;
+}
+
+.content .mod .fire .col-1,.content .mod .fire .col-2,.content .mod .fire .col-3
+{
+	float: left;
+}
+
+.content .mod .fire .col-3 b
+{
+	font-family: arial;
+	padding:0 3px;
+}
+
+.content .mod .fire .col-1
+{
+	font-size: 60px;
+	line-height: 1em;
+	font-family: arial;
+	color: #ff5400;
+	font-weight: bold;
+}
+
+.content .mod .fire .col-2 span
+{
+	font-size:16px;
+	font-weight: bold;
+	display: block;
+	color: #ff5400;
+}
+
+.content .mod .fire .col-2
+{
+	border-right: 1px solid #888;
+	padding:8px 20px 8px 10px;
+}
+
+.content .mod .fire .col-3
+{
+	padding: 8px 0 0 20px;
+}
+
+.content .mod .speciallist
+{
+	padding: 0 30px;
+}
+
+.content .mod .speciallist li
+{
+	padding: 0 0 12px 0;
+}
+
+.content .mod .speciallist li i
+{
+	float: right;
+}
+
+.content .mod .speciallist li a
+{
+	display: block;
+}
+
+
+.content .mod .sgallery
+{
+	padding:0 25px;
+	margin:20px 0 70px 0;
+}
+
+.content .mod .sgallery ul
+{
+	border:1px solid #ccc;
+}
+
+.content .mod .sgallery img
+{
+	width: 100%;
+}
+
+.content  .mod .sgallery .owl-wrapper li
+{
+	*float: left;
+}
+
+.content  .mod .sgallery  .owl-pagination
+{
+	bottom: -40px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.content  .mod .sgallery  .owl-page {
+    display: inline-block;
+ 	*zoom: 1;
+	*display: inline;    
+   
+}
+
+
+.content .mod .sgallery  .owl-page span {
+    background: #a7b4b4;
+    border-radius: 6px;
+    display: block;
+    height: 12px;
+    margin: 0 6px;
+    outline: 0 none;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 12px;
+}
+
+.content .mod .sgallery  .owl-page.active span
+{
+	background: #00b025
+}
+
+
+
+
+@media screen and (max-width:1024px)
+{
+
+	.content .column-1
+	{
+		width: 740px;
+	}
+	
+	.content .column-2 
+	{
+		width: 260px;
+	}
+
+	.content .goverment ul.switch li
+	{
+		font-size: 13px;
+	}
+
+	.content .goverment
+	{
+		width: 260px;
+		top: 91px;
+	}
+
+	.content .goverment h2 span
+	{
+		font-size: 16px;
+		padding: 18px 25px 8px 65px;
+	}
+
+	.content .goverment ul.govlist
+	{
+		padding-left: 20px;
+	}
+
+	.content .goverment ul.govlist li
+	{
+		font-size: 12px;
+		line-height: 28px;
+	}
+
+	.content .goverment .govitemlist-1, .content .goverment .govitemlist-2
+	{
+		padding-left: 20px;
+	}
+
+	.content .goverment .govitemlist-1 li
+	{
+		line-height: 30px;
+	}
+
+	.content .goverment .resultsearch
+	{
+		padding-top: 9px;
+	}
+
+	.content .goverment .resultsearch input
+	{
+		width: 80px;
+	}
+
+	.content .goverment .resultsearch .kyw
+	{
+		width: 140px;
+	}
+
+	.content .column-1 .newsmod h2,.content .conven h2,.content .exchange h2,.content .mod h2
+	{
+		font-size: 16px;
+	}
+
+	.content .column-1 .newsmod .newsmodwraper
+	{
+		padding-right: 30px;
+	}
+
+	.content .column-1 .newsmod .special h3
+	{
+		font-size: 17px;
+	}
+
+	.content .column-1 .newsmod .enlist a
+	{
+		font-size: 13px;
+	}
+
+	.content .column-1 .newsmod .tmlist a
+	{
+		font-size: 13px;
+	}
+	
+	.content .column-1 .commpop
+	{
+		margin-right: 30px;
+	}
+	
+	.content .column-2
+	{
+		padding-top: 440px;
+	}
+
+	.content .conven
+	{
+		margin-right: 30px;
+	}
+
+	.content .exchange
+	{
+		margin-right: 30px;
+	}
+
+	.content .sele-1
+	{
+		width: 110px;
+	}
+
+	.content .conven .search input.l-1
+	{
+		width: 80px;
+	}
+
+	.content .conven .search input.l-2
+	{
+		width: 130px;
+	}
+
+	.content .conven .search input.l-3
+	{
+		width: 117px;
+	}
+
+	.content .conven .search input.l-4
+	{
+		width: 170px;
+	}
+
+	.content .exchange h2 a
+	{
+		padding: 0 4px;
+	}
+
+	.content .exchange h2 .complain
+	{
+		padding-left: 12px;
+	}
+
+	.content .exchange .mail
+	{
+		margin-right: 145px;
+	}
+
+	.content .mod .fire
+	{
+		padding-left: 20px;
+	}
+
+	.content .mod .fire .col-1
+	{
+		font-size: 55px;
+	}
+
+	.content .mod .fire .col-2
+	{
+		padding: 8px 15px 5px 8px
+	}
+
+	.content .mod .fire .col-3
+	{
+		padding: 8px 0 0 15px;
+	}
+}
+
+@media screen and (max-width:1000px)
+{
+	.content .adv .owl-pagination
+	{
+		width: 100%;
+	}
+
+	.content .goverment
+	{
+		position: static;
+		width: auto;
+	}
+
+	.content .goverment ul.govlist,.content .goverment .resultsearch,.content .goverment .govitemlist-1, .content .goverment .govitemlist-2
+	{
+		border:0;
+		padding-left: 25px;
+	}
+
+	.content .goverment ul.govlist li,.content .goverment .resultsearch li,.content .goverment .govitemlist-1 li, .content .goverment .govitemlist-2 li
+	{
+		font-size: 14px;
+		line-height: 2.5em;
+	}
+	
+	.content .goverment .resultsearch
+	{
+		text-align: center;
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.content .goverment .resultsearch form
+	{
+		display: inline-block;
+		margin:auto;
+	}
+
+	.content .goverment .resultsearch input
+	{
+		width: 220px;
+	}
+	
+	.content .goverment .resultsearch .kyw
+	{
+		width: 420px;
+	}
+
+	.content .goverment ul.govlist li
+	{
+		width: 25%;
+	}
+
+	.content .goverment .govitemlist-1 li
+	{
+		width: 33.33%;
+	}
+
+	.content .goverment .govitemlist-2 li
+	{
+		width: 25%;
+	}
+
+	.content .goverment h2
+	{
+		border-right: 0;
+		border-left: 0;
+	}
+
+	.content .goverment  .line
+	{
+		margin:0 25px;
+	}
+	
+	.content .column-1
+	{
+		float: none;
+		width: auto;
+	}
+
+	.content .column-1 .newsmod
+	{
+		float: none;
+		width: auto;
+	}
+
+	.content .column-1 .newsmod .newsmodwraper
+	{
+		padding: 0 25px;
+	}
+
+	.content .column-1 .newsmod .enlist li
+	{
+		border-bottom: 1px solid #e0e0e0;
+		padding-top: 10px;
+	}
+
+	.content .column-1 .newsmod .special
+	{
+		margin-bottom: 10px;
+	}
+
+	.content .column-1 .newsmod .enlist a,.content .column-1 .newsmod .tmlist a
+	{
+		font-size: 14px;
+	}
+
+	.content .column-1 .commpop
+	{
+		margin:30px 25px 0 25px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.content .conven,.content .exchange
+	{
+		margin:0 25px 0 25px;
+	}
+
+	.content .conven ul.switch li
+	{
+		padding: 0 30px;
+	}
+
+
+	.content .column-1 .commpop li
+	{
+		text-align: center;
+	}
+
+	.content .column-1 .commpop span
+	{
+		float: none;
+		margin-bottom: 5px;
+	}
+
+	.content .column-1 .commpop samp.poptxtwraper
+	{
+		display: block;
+	}
+
+	.content .column-1 .commpop .popwraper
+	{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.content .column-2
+	{
+		padding-top: 30px;
+		float: none;
+		width: auto;
+		margin:0 25px 0 25px;
+	}
+
+	.content .mod .channellist li
+	{
+		width: 25%;
+		font-size: 14px;
+	}
+
+	.content .mod .speciallist li
+	{
+		font-size: 14px;
+		padding-bottom: 15px;
+	}
+
+}
+
+@media screen and (max-width:767px)
+{	
+	.content .conven ul.switch li.current
+	{
+		background: none;
+		color: #fff;
+		border: none;
+		display: block;
+		height: 40px;
+		line-height: 40px;
+	}
+
+	.content .conven ul.switch li
+	{
+		float: none;
+		display: none;
+		text-align: left;
+		padding: 0 0 0 25px;
+		height: 40px;
+		line-height: 40px;
+	
+	}
+
+	.content .conven ul.switch li.noshow
+	{
+		display: none;
+	}
+
+	.content .conven ul.switch li.show
+	{
+		display: block;
+	}
+
+	.content .conven .subsmenu 
+	{
+		display: block;
+	}
+
+	.content .exchange h2 span.extra
+	{
+		position: static;
+		right: 0;
+		display: block;
+		margin-top: -10px;
+		line-height: 1.25em;
+		padding-bottom: 10px;
+	}
+
+	.content .exchange h2 a
+	{
+		padding-right:16px;
+		padding-left: 0;
+	}
+
+	.content .exchange .mail ul li .col-1
+	{
+		width: 80px;
+	}
+	.content .exchange .mail ul li .col-2
+	{
+		margin-left: 80px;
+	}
+}
+
+
+
+@media screen and (max-width:600px)
+{
+	.content .conven .itemlist .item .itemtitle
+	{
+		float: none;
+		width: auto;
+		padding: 5px 0 5px 0;
+		font-size: 16px;
+	}
+
+	.content .conven .itemlist .item ul
+	{
+		width: 100%;
+	}
+
+	.content .conven .itemlist .item li
+	{
+		margin-right: 30px;
+	}
+
+	.content .conven .search input
+	{
+		width: 200px;
+	}
+
+
+	.content .goverment .resultsearch input
+	{
+		width: 150px;
+	}
+	
+	.content .goverment .resultsearch .kyw
+	{
+		width: 280px;
+	}
+}
+
+@media screen and (max-width:400px)
+{
+
+	.content .adv .owl-pagination
+	{
+		bottom: 10px;
+	}
+	.content .goverment .govitemlist-1 li
+	{
+		width: 50%;
+	}
+
+	.content .goverment .govitemlist-2 li
+	{
+		width: 33.33%;
+	}
+
+	.content .goverment .resultsearch input
+	{
+		width: 100px;
+	}
+	
+	.content .goverment .resultsearch .kyw
+	{
+		width: 180px;
+	}
+
+	.content .exchange .focusus
+	{
+		position: static;
+		width: auto;
+	}
+
+	.content .exchange .focusus div
+	{
+		float: left;
+		width: 50%;
+	}
+
+	.content .exchange .mail
+	{
+		width: auto;
+		margin:0;
+	}
+
+	.content .column-1 .commpop
+	{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+
+
+
+	.content .mod .channellist li
+	{
+		width: 33.33%;
+	}
+
+}
+
+@media screen and (max-width:360px)
+{
+	.content .exchange h2 .complain
+	{
+		display: block;;
+		padding-left: 0;
+		line-height: 1.25em;
+		margin-top: -5px;
+		padding-bottom: 15px;
+	}
+
+	.content .conven .search input
+	{
+		width: 150px;
+	}
+
+	.content .conven .search input.l-4
+	{
+		width: 150px;
+	}
+
+}
+

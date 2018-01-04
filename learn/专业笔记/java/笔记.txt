@@ -1,0 +1,32 @@
+Swing中常用的JFrame和JDialog窗体用法的例子
+http://lixiyu.blog.51cto.com/4136883/1311365
+
+ java中设置JButton的背景图片，并在它上面显示文字
+http://blog.csdn.net/mr_pang/article/details/47296829
+
+ Java中JFrame的getContentPane()和setContentPane()方法使用说明
+ http://632977922.blog.51cto.com/6231950/1125583
+
+ Jpanel和container和jframe的区别 
+ http://blog.sina.com.cn/s/blog_6fd6dec601016c5u.html
+
+ Java中如何设置按钮背景图片大小
+ http://blog.csdn.net/niuox/article/details/6915824
+
+ [Swing基础】setPreferredSize和setSize的区别及用法
+ http://blog.csdn.net/isea533/article/details/8593183
+
+ swing光标设置
+ http://www.programgo.com/article/33402931341/
+
+  java Swing布局管理之GridLayout布局
+ http://blog.csdn.net/sweetgirl520/article/details/51345831
+ 
+ Linux终端和win32控制台文本颜色输出
+ http://www.cnblogs.com/crabxx/p/4046498.html
+ 
+ 【Swing基础】布局管理器 - LayoutManager
+ http://tieba.baidu.com/p/2101752057
+ 
+ swing jframe 框架面板知识
+ http://www.voidcn.com/blog/orange2211/article/p-2957998.html
